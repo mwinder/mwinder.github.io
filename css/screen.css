@@ -196,3 +196,7 @@ ul.posts {
   #related h2 {
     margin-bottom: 1em;
   }
+
+pre {
+  font-family: monospace;
+}

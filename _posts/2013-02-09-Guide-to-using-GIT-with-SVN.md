@@ -171,7 +171,7 @@ You can use GIT locally, without needing to set up a server, to version any fold
 When a user wants to get a copy of the source code they execute the 'clone' command. This is equivalent to doing a checkout in SVN:
 
 > git clone <path to repository>
-> git clone //hs-hyperv-01/Repos/Tutorial.git
+> git clone //server/Repos/Tutorial.git
 
 NB – When using the git bash included with msysgit, backslashes in network paths will need to be replaced with forward slashes.
 A clone can also be made with TortoiseGit:

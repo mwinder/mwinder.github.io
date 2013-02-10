@@ -23,25 +23,25 @@ To work with GIT you will need the following tools to be installed on your PC:
 
 I suggest the following options. Choose these components:
 
-<need-image>
+![Msysgit components][msysgit-components]
 
 Choose the option 'Use Git Bash only':
 
-<need-image>
+![Msysgit path][msysgit-path]
 
 Choose the option 'Checkout as-is, commit as-is':
 
-<need-image>
+![Msysgit line-endings][msysgit-line-endings]
 
 ## TortoiseGit
 
 I suggest installing with the following options. Choose OpenSSH client:
 
-<need-image>
+![TortoiseGit SSH client][tortoisegit-ssh]
 
 After install, I recommend you disable caching as this can slow your machine down markedly:
 
-<need-image>
+![TortoiseGit caching][tortoisegit-caching]
 
 ## .gitconfig
 .gitconfig is a file that can be created in you user profile folder (C:\Documents and Settings\<username> or C:\Users\<username>). It is a place to put settings that apply to all GIT repositories on your machine.
@@ -55,7 +55,7 @@ NB – These settings can also be set/overridden by editing the .git/config file
 
 These settings can also be updated with Tortoise. From the context menu, click Settings:
 
-<need-image>
+![TortoiseGit .gitconfig][tortoisegit-config]
 
 Check the box labeled 'Save as Global' to have your changes applied to your .gitconfig file. Leaving the box un-ticked will apply the settings to the repositories .git\config file. It is important that your name and email is set here before you do any work in the repository, so that your commits can be identified.
 
@@ -239,3 +239,10 @@ Rebasing has the advantage that in maintains a linear revision history, but it i
 * Git for SVN users (http://git.or.cz/course/svn.html)
 * Community Book (http://book.git-scm.com)
 * Article on DVCS/Directed Acrylic Graphs (http://www.ericsink.com/entries/dvcs_dag_1.html, http://www.ericsink.com/entries/dvcs_dag_2.html)
+
+[msysgit-components]: /content/images/msysgit-components.png
+[msysgit-line-endings]: /content/images/msysgit-line-endings.png
+[msysgit-path]: /content/images/msysgit-path.png
+[tortoisegit-caching]: /content/images/tortoisegit-caching.png
+[tortoisegit-config]: /content/images/tortoisegit-config.png
+[tortoisegit-ssh]: /content/images/tortoisegit-ssh.png

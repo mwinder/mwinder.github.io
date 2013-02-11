@@ -43,13 +43,13 @@ After install, I recommend you disable caching as this can slow your machine dow
 ![TortoiseGit caching][tortoisegit-caching]
 
 ## .gitconfig
-.gitconfig is a file that can be created in you user profile folder (C:\Documents and Settings\<username> or C:\Users\<username>). It is a place to put settings that apply to all GIT repositories on your machine.
+.gitconfig is a file that can be created in you user profile folder (C:\Documents and Settings\username or C:\Users\username). It is a place to put settings that apply to all GIT repositories on your machine.
 
 You should add the following section to your .gitconfig:
 
     [user]
-        name = <Your full name>
-        email = <Your email address>`
+        name = Your full name
+        email = Your email address
 
 NB – These settings can also be set/overridden by editing the .git/config file within an individual repository.
 
@@ -75,7 +75,7 @@ NB - It is possible to use command line parameters to maintain branches and tags
 
 The following command will setup a GIT repository against the trunk in a folder named "Tutorial":
 
-    git svn clone –r HEAD http://svn-server:port/path/to/Trunk Tutorial`
+    git svn clone –r HEAD http://svn-server:port/path/to/Trunk Tutorial
 
 Notice the use of the –r parameter. This specifies the SVN revision number to start the clone from. By passing HEAD to it you are saying that you don't want any history from SVN. This will result in a repository with a single commit containing the source code as it is in the latest commit to SVN. You can also pass a number to –r which will give you a repository with the revision corresponding to that number and all subsequent revisions. Omitting the –r parameter with given you the full history of the SVN path you specify.
 
@@ -150,7 +150,7 @@ When the development is ready to be committed to SVN the following process shoul
 1. A final sync with SVN should be performed to ensure the GIT repository is fully up to date.
 2. Merge master into svn-baseline
     - Switch to svn-baseline: `git checkout svn-baseline`
-    - Merge changes from master: `git merge master –m "<Commit message>"`
+    - Merge changes from master: `git merge master –m "Commit message"`
     - Note: the commit message above should contain the commit message as it should be when it goes into SVN.
 3. Commit the combined change to SVN: `git svn dcommit`
 
@@ -166,31 +166,30 @@ You can use GIT locally, without needing to set up a server, to version any fold
 
 When a user wants to get a copy of the source code they execute the 'clone' command. This is equivalent to doing a checkout in SVN:
 
-    git clone <path to repository>
+    git clone path/to/repository
     git clone //server/Repos/Tutorial.git
 
 NB – When using the git bash included with msysgit, backslashes in network paths will need to be replaced with forward slashes.
-A clone can also be made with TortoiseGit:
 
-<need-image>
+A clone can also be made with TortoiseGit.
 
 The resultant cloned repository should be on the master branch and have a remote named origin. Although there will be a "remote branch" named svn-baseline the only local branch should be master. Developers should not be concerned with the svn-baseline branch, and should never commit to it. A useful tool to illustrate this is gitk, which is included in the msysgit package. To use it run 'gitk' from within your repository, at the command line. The following screenshot shows the current branch is master, in bold, and that there are 2 remote branches remotes/origin/master and remotes/origin/svn-baseline. It also shows the history of the repository. Later when commits have been made to master the nodes on the left will be arranged in a tree structure a development progresses.
 
 #### Do some work
+
 Next you would make some code changes – add/edit/delete some files as you normally would. One thing to note is that when renaming, moving or deleting files in a GIT repository, there is no need to do it with a special command or tool like you would in SVN with an 'SVN Move' or 'SVN Rename...'. Instead you can just move, rename or delete the files and GIT will detect these changes (you still need to tell GIT to add new files).
 
-You can check the status of your repository by running the git status command. Or by using the TortoiseGIT 'Check for modifications' option:
+You can check the status of your repository by running the git status command. Or by using the TortoiseGIT 'Check for modifications' option.
 
 #### Committing your work
+
 When you're ready to commit your changes you should make sure all files are marked as added that should be. A quick way of doing this, assuming all files not under version control should be added, is to run the command 'git add .' (notice the dot). Alternatively, you can use the Check for modifications windows to add then (right-click on the file and then click add). Or you can browse to the file itself and then click add from the Tortoise context menu.
 
 Once you prepared your change, commit it using the following command:
 
-    git commit –am "<commit message here>"
+    git commit –am "commit message here"
 
-Alternatively you can use TortoiseGIT's Commit -> 'master':
-
-<need-image>
+Alternatively you can use TortoiseGIT's Commit -> 'master'
 
 #### Share your work
 
@@ -199,7 +198,7 @@ An important difference between GIT and SVN is that the commit operation is a lo
 1. Starting on your master branch
 2. Ensure that your working copy is clean (git status should return 'nothing to commit (working directory clean)' and/or the Check for modifications window should be empty).
 3. Pull changes down from the server: `git pull`
-4. If there are any conflicts you will need to resolve them and commit the resolution: `git commit –a` and accept the merge commit message in VI - `:q + <Enter>`.
+4. If there are any conflicts you will need to resolve them and commit the resolution: `git commit –a` and accept the merge commit message in VI - `:q + (Enter)`.
 5. Push your changes to the server: `git push`
 
 #### More advanced usage: branching, rebasing

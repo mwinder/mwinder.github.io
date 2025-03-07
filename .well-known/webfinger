@@ -1,23 +1,23 @@
 {
-  "subject": "acct:mwinder@hachyderm.io",
+  "subject": "acct:mwinder@mas.to",
   "aliases": [
-    "https://hachyderm.io/@mwinder",
-    "https://hachyderm.io/users/mwinder"
+    "https://mas.to/@mwinder",
+    "https://mas.to/users/mwinder"
   ],
   "links": [
     {
       "rel": "http://webfinger.net/rel/profile-page",
       "type": "text/html",
-      "href": "https://hachyderm.io/@mwinder"
+      "href": "https://mas.to/@mwinder"
     },
     {
       "rel": "self",
       "type": "application/activity+json",
-      "href": "https://hachyderm.io/users/mwinder"
+      "href": "https://mas.to/users/mwinder"
     },
     {
       "rel": "http://ostatus.org/schema/1.0/subscribe",
-      "template": "https://hachyderm.io/authorize_interaction?uri={uri}"
+      "template": "https://mas.to/authorize_interaction?uri={uri}"
     }
   ]
 }
